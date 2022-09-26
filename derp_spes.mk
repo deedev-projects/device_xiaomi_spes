@@ -8,13 +8,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common DerpFest stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+DERP_BUILDTYPE := Official
 
 # Inherit from spes device
 $(call inherit-product, device/xiaomi/spes/device.mk)
 
-PRODUCT_NAME := arrow_spes
+PRODUCT_NAME := derp_spes
 PRODUCT_DEVICE := spes
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
